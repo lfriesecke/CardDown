@@ -20,6 +20,7 @@ enum ElementTag {
     HEADING,
     TEXT_BLOCK,
     BULLET_LIST,
+    ORDERED_LIST,
     WRONG_ANSWER,
     RIGHT_ANSWER,
     EMPTY_LINE,
