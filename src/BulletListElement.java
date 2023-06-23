@@ -3,22 +3,10 @@ import java.util.List;
 
 
 /** ContentElement representing unordered list of items. */
-public class BulletListElement extends ContentElement {
-
-    private List<String> bulletPoints;
+public class BulletListElement extends ListElement {
 
     public BulletListElement(List<String> bulletPoints) {
-        this.bulletPoints = bulletPoints;
-    }
-
-    @Override
-    public void parseInlineFormatting() {
-        bulletPoints = parseInlineFormatting(bulletPoints);
-    }
-
-    @Override
-    public void parseLinks() {
-        bulletPoints = parseLinks(bulletPoints);
+        super(bulletPoints);
     }
 
     @Override
@@ -26,24 +14,12 @@ public class BulletListElement extends ContentElement {
         List<String> output = new ArrayList<>();
         output.add("<ul>");
 
-        for (String point : bulletPoints) {
+        for (String point : points) {
             output.add(String.format("  <li>%s</li>", point));
         }
 
         output.add("</ul>");
         return output;
-    }
-
-    @Override
-    public String toString() {
-        if (bulletPoints.isEmpty()) return "";
-        StringBuilder builder = new StringBuilder();
-        for (String bPoint : bulletPoints) {
-            builder.append(bPoint);
-            builder.append('\n');
-        }
-        builder.deleteCharAt(builder.length() - 1);
-        return builder.toString();
     }
 
     @Override
