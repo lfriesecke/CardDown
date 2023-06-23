@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-// ------------------------------------------------------ //
 
 /** Represents all possible valid card tags. */
 enum Tag {
