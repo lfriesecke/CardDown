@@ -312,6 +312,6 @@ public class MarkdownLoader {
         }
 
         // export to HTML:
-        generator.createHTMLCards(cards, "example.html");
+        generator.exportCards(cards, "example.html");
     }
 }

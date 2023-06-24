@@ -4,13 +4,12 @@ import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// ------------------------------------------------------ //
 
 /** Represents object to export LearningCards to HTML file. */
-public class HTMLCardGenerator {
+public class HTMLCardGenerator extends CardGenerator {
 
     /** Creates HTML file containing given list of LearningCards. */
-    public void createHTMLCards(List<LearningCard> cards, String output_file) {
+    public void exportCards(List<LearningCard> cards, String output_file) {
 
         // create output file:
         Path filePath = Paths.get(output_file);

@@ -16,6 +16,9 @@ public abstract class ContentElement {
     /** Returns HTML representation of content element. */
     public abstract List<String> toHTML();
 
+    /** Returns HTML representation of content elements suitable for importing files to Anki. */
+    public abstract List<String> toAnki();
+
     /** Returns simple String representation of given ContentElement. */
     @Override
     public abstract String toString();
