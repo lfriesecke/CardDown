@@ -28,10 +28,17 @@ Die Rückseite hat diesen Text
 [Link](www.google.de)
 
 
-# Wie sehen Listen aus?
+# Wie sehen Listen aus? {QUESTION}
+
+## Listen können so aussehen {FRONT}
 - so mit `-`
 * oder so mit `*`
 + oder so mit `+`
+
+## Listen können aber auch so aussehen {BACK}
+1. Dies ist ein Item
+17. Dies ist auch ein Item
+1337. Und das ist auch ein Item
 
 # Wie sieht Inline-Quellcode aus?
 Quellcode wird mit ``backticks`` eingeleitet

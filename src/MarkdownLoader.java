@@ -128,6 +128,7 @@ public class MarkdownLoader {
     private static ElementTag getElement (String line) {
         if (line.matches("^#+ .*")) return ElementTag.HEADING;
         if (line.matches("^[-\\*+] .*")) return ElementTag.BULLET_LIST;
+        if (line.matches("^[1-9]*\\. .*")) return ElementTag.ORDERED_LIST;
         if (line.startsWith("[ ] ")) return ElementTag.WRONG_ANSWER;
         if (line.startsWith("[x] ")) return ElementTag.RIGHT_ANSWER;
         if (line.equals("")) return ElementTag.EMPTY_LINE;
@@ -191,6 +192,17 @@ public class MarkdownLoader {
                         }
                         BulletListElement bulletList = new BulletListElement(bulletPoints);
                         curContentCard.appendContent(bulletList);
+                    }
+
+                    case ORDERED_LIST -> {
+                        List<String> items = new ArrayList<>();
+                        while (lineNo < c.content.size() && getElement(c.content.get(lineNo)) == ElementTag.ORDERED_LIST) {
+                            String line = c.content.get(lineNo);
+                            items.add(line.substring(line.indexOf(' ')));
+                            lineNo++;
+                        }
+                        OrderedListElement orderedList = new OrderedListElement(items);
+                        curContentCard.appendContent(orderedList);
                     }
 
                     case WRONG_ANSWER -> {
