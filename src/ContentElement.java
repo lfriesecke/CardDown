@@ -17,7 +17,13 @@ public abstract class ContentElement {
     public abstract List<String> toHTML();
 
     /** Returns HTML representation of content elements suitable for importing files to Anki. */
-    public abstract List<String> toAnki();
+    public String toAnki() {
+        StringBuilder output = new StringBuilder();
+        for (String line: this.toHTML()) {
+            output.append(line);
+        }
+        return output.toString();
+    }
 
     /** Returns simple String representation of given ContentElement. */
     @Override

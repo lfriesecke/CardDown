@@ -38,6 +38,15 @@ public class TextBlockElement extends ContentElement {
     }
 
     @Override
+    public String toAnki() {
+        StringBuilder output = new StringBuilder();
+        for (String line : this.toHTML()) {
+            output.append(line);
+        }
+        return output.toString();
+    }
+
+    @Override
     public String toString() {
         if (text.isEmpty()) return "";
         StringBuilder builder = new StringBuilder();

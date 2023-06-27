@@ -19,18 +19,6 @@ public abstract class LearningCard {
     /** Returns the back side of the card as ContentElement objects. */
     protected abstract List<ContentElement> getBackContentElements();
 
-    /** Returns the card with HTML formatting. */
-    public List<String> getContentAsHTML() {
-        List<String> output = new ArrayList<>();
-        for (ContentElement cElem : getFrontContentElements()) {
-            output.addAll(cElem.toHTML());
-        }
-        for (ContentElement cElem : getBackContentElements()) {
-            output.addAll(cElem.toHTML());
-        }
-        return output;
-    }
-
     /** Appends ContentElement to front side. */
     public abstract void extendFrontContent(ContentElement content);
 
@@ -64,6 +52,33 @@ public abstract class LearningCard {
         res.addAll(this.getBackContent());
 
         return res;
+    }
+
+    /** Returns HTML representation of card. */
+    public List<String> getContentAsHTML() {
+        List<String> output = new ArrayList<>();
+        for (ContentElement cElem : getFrontContentElements()) {
+            output.addAll(cElem.toHTML());
+        }
+        for (ContentElement cElem : getBackContentElements()) {
+            output.addAll(cElem.toHTML());
+        }
+        return output;
+    }
+
+    /** Returns anki representation of card. */
+    public String getContentAsAnki() {
+        StringBuilder output = new StringBuilder();
+        output.append("\"");
+        for (ContentElement cElem : getFrontContentElements()) {
+            output.append(cElem.toAnki());
+        }
+        output.append("\";\"");
+        for (ContentElement cElem : getBackContentElements()) {
+            output.append(cElem.toAnki());
+        }
+        output.append("\"");
+        return output.toString();
     }
 
     /** Writes the content to the console. */

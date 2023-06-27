@@ -14,7 +14,7 @@ public class OrderedListElement extends ListElement {
         output.add("<ol>");
 
         for (String point : points) {
-            output.add(String.format("  <li>%s</li>", point));
+            output.add(String.format("<li>%s</li>", point));
         }
 
         output.add("</ol>");

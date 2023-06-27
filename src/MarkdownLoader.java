@@ -300,7 +300,7 @@ public class MarkdownLoader {
 
         // initialize MarkdownLoader and HTMLCardGenerator:
         MarkdownLoader loader = new MarkdownLoader();
-        HTMLCardGenerator generator = new HTMLCardGenerator();
+        CardGenerator generator = new AnkiCardGenerator();
         List<LearningCard> cards = new ArrayList<>();
 
         // load Markdown File:
@@ -312,6 +312,6 @@ public class MarkdownLoader {
         }
 
         // export to HTML:
-        generator.exportCards(cards, "example.html");
+        generator.exportCards(cards, "anki_example.txt");
     }
 }

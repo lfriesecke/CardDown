@@ -9,6 +9,7 @@ import java.util.List;
 public class HTMLCardGenerator extends CardGenerator {
 
     /** Creates HTML file containing given list of LearningCards. */
+    @Override
     public void exportCards(List<LearningCard> cards, String output_file) {
 
         // create output file:

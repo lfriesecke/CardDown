@@ -15,7 +15,7 @@ public class BulletListElement extends ListElement {
         output.add("<ul>");
 
         for (String point : points) {
-            output.add(String.format("  <li>%s</li>", point));
+            output.add(String.format("<li>%s</li>", point));
         }
 
         output.add("</ul>");
