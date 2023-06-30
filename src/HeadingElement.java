@@ -16,6 +16,10 @@ public class HeadingElement extends ContentElement {
         this.text = text;
     }
 
+    public String getTag() {
+        return this.tag;
+    }
+
     @Override
     public void parseInlineFormatting() {
         text = parseInlineFormatting(text);

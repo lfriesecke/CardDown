@@ -1,34 +1,3 @@
-# Welcher Berg ist der höchste Berg der Welt?
-**Mount Ever**est**
-
-# Wie nennst du ein männliches Schwein?
-Eber
-
-# Wie viele Oscars gewann der Film Titanic?
-11 Oscars
-
-# Wie heißen die besten Freunde von „Harry Potter“?
-Hermine Granger und Ron Weasley
-
-# Wann wurde Queen Elisabeth II. zur Königin gekrönt?
-1953
-
-# Aus wie vielen Einzelknochen besteht eine menschliche Hand?
-27
-
-# Was ist ein Sonett ?
-Eine Gedichtform
-
-# Wofür stehen die olympischen Ringe?
-Für die 5 Kontinente
-
-# Wer war der erste Präsident der Vereinigten Staaten von Amerika?
-George Washington
-
-# Wie viele Bundesländer hat Deutschland?
-16
-
-
 # Frage 1 {QUESTION}
 
 ## Wie viele Weihnachtsbäume werden in Deutschland pro Jahr verkauft? {FRONT}

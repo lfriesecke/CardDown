@@ -32,7 +32,7 @@ public class AnkiCardGenerator extends CardGenerator {
         output.add("");
 
         // generate learning cards:
-        for (LearningCard c :cards) {
+        for (LearningCard c : cards) {
             output.add(c.getContentAsAnki());
         }
 

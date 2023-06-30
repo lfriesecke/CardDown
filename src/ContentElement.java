@@ -138,12 +138,11 @@ public abstract class ContentElement {
         for (ContentElement curElem : elements) {
 
             // check if sides should be switched:
-            String strRep = curElem.toString().replaceAll("\\s+$", "");
             if (curElem.getElementTag() == ElementTag.HEADING) {
-                if (strRep.endsWith(" {FRONT}")) {
+                if (((HeadingElement)curElem).getTag().equals("FRONT")) {
                     isFront = true;
                 }
-                else if (strRep.endsWith(" {BACK}")) {
+                else if (((HeadingElement)curElem).getTag().equals("BACK")) {
                     isFront = false;
                 }
             }
