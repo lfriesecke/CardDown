@@ -71,11 +71,11 @@ public abstract class LearningCard {
         StringBuilder output = new StringBuilder();
         output.append("\"");
         for (ContentElement cElem : getFrontContentElements()) {
-            output.append(cElem.toAnki());
+            output.append(cElem.toAnki().replaceAll("\"", "\"\""));
         }
         output.append("\";\"");
         for (ContentElement cElem : getBackContentElements()) {
-            output.append(cElem.toAnki());
+            output.append(cElem.toAnki().replaceAll("\"", "\"\""));
         }
         output.append("\"");
         return output.toString();
