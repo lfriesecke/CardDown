@@ -29,7 +29,7 @@ Question Cards have a front and a back side. The content following level 2 headi
 But how do they actually work?
 
 
-# Multiple choice card are a whole different level, because ...
+# Multiple choice card are a whole different level, because ... {CHOICE}
 
 [ ] They are not supported yet?
 
