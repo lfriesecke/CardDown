@@ -298,20 +298,20 @@ public class MarkdownLoader {
 
     public static void main(String[] args) {
 
-        // initialize MarkdownLoader and HTMLCardGenerator:
+        // initialize MarkdownLoader and Anki CardGenerator:
         MarkdownLoader loader = new MarkdownLoader();
         CardGenerator generator = new AnkiCardGenerator();
         List<LearningCard> cards = new ArrayList<>();
 
         // load Markdown File:
         try {
-            cards = loader.loadCardFile("cards.md");
+            cards = loader.loadCardFile("examples/example.md");
         } catch (IOException ex) {
             System.err.println("Invalid file path");
             System.exit(1);
         }
 
         // export to HTML:
-        generator.exportCards(cards, "anki_example.txt");
+        generator.exportCards(cards, "examples/output.txt");
     }
 }
